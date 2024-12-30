@@ -1,0 +1,483 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #e0e8f0; /* Светло-синий фон */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #29335c; /* Темно-синий цвет для заголовков */
+    margin-top: 0;
+}
+
+a {
+    color: #38598b; /* Синий цвет для ссылок */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #b3d0e6; /* Светло-голубой фон для шапки */
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень */
+    position: relative;
+    z-index: 10;
+    display: flex; /* Включаем Flexbox для header */
+    align-items: center; /* Выравнивание по центру по вертикали */
+}
+
+header:not(:has(.container)){
+    justify-content: center; /* Выравнивание по центру по горизонтали */
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Включаем Flexbox для списка */
+}
+
+nav li {
+    margin-left: 20px; /* Расстояние между ссылками */
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Добавляем */
+}
+
+.auth input {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Скругленные углы */
+}
+
+.auth button,
+.filters button,
+button#add-to-cart,
+button#logout-button,
+button#clear-cart {
+    background-color: #38598b;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    padding: 40px 0 20px;
+}
+
+.hero {
+    background-color: #c8d8e4; /* Более насыщенный синий для фона секции hero */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero h1{
+    margin-bottom: 0; /* Убираем нижний отступ */
+}
+
+.hero p{
+    margin-top: 10px; /* Добавляем отступ сверху */
+}
+
+.featured-books {
+    margin-top: 40px;
+}
+
+.grid-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.grid-container h2{
+    margin-bottom: 40px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+    gap: 20px;
+    justify-items: center;
+}
+
+.book-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.book-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-card h3 {
+    margin-top: 0;
+}
+/* Shop */
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.filters button{
+    margin-right: 10px;
+}
+
+.books-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.books-table th,
+.books-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.books-table th {
+    background-color: #f0f0f0;
+}
+
+.books-table img {
+    max-width: 50px;
+    height: auto;
+}
+
+/* Cart */
+
+.cart .container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 500px;
+}
+
+.cart .book-info{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.cart .book-info img{
+    max-width: 100px;
+}
+
+.shop-container h2{
+    margin: 0 0 20px 0;
+}
+
+/* Footer */
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #29335c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+body{
+    position: relative; /* Это нужно для футера */
+    min-height: 100vh; /* Это нужно чтобы футер не вылезал за границы */
+    padding-bottom: 80px; /* Отступ снизу для футера */
+    box-sizing: border-box; /* Это нужно чтобы padding не ломал высоту */
+}
+/* About - Timeline */
+
+.about h2{
+    text-align: center;
+}
+.timeline {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+}
+.timeline-line {
+    width: 4px;
+    height: 90%;
+    background-color: #38598b;
+    position: absolute;
+    left: 49.8%;
+    z-index: -1;
+    top: 6%; /* Корректирую что бы линия была на нужном месте */
+}
+.timeline-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-event {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.timeline-event:nth-child(odd) .timeline-point {
+    right: 49.1%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-event:nth-child(even) .timeline-point{
+    left: 49%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.timeline-event:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    z-index: 10; /* Добавил что бы текст был выше линии */
+}
+
+.timeline-content img {
+    max-width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.timeline-point {
+    min-width: 20px;
+    min-height: 20px;
+    background-color: #38598b;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Register form */
+.register {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-container{
+    width: fit-content;
+}
+
+.register h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #38598b;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 500px;
+}
+.feedback h2{
+    margin: 20px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+.form-buttons button{
+    width: 48%;
+}
+
+.feedback form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.feedback .form-group input,.feedback .form-group textarea{
+    width: 94%;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Слайдер */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    width: 800px;
+}
+.mySlides img{
+    width: 30%;
+}
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0; /* было раньше */
+    border-radius: 3px 0 0 3px;
+}
+.prev{
+    left: 0; /* Добавляем */
+    border-radius: 0 3px 3px 0;
+}
+
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}

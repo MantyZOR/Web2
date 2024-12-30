@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжный магазин</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+  <div class="container">
+    <img src="images/logo.jpg" alt="Логотип" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="shop.html">Магазин</a></li>
+        <li><a href="about.html">Почему мы</a></li>
+        <li><a href="cart.html" id="cart-link" style="display: none;">Список покупок</a></li>
+      </ul>
+    </nav>
+    <div class="auth">
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="Имя пользователя" required>
+        <input type="password" id="password" placeholder="Пароль" required>
+        <button type="submit">Войти</button>
+        <button id="register-button">Регистрация</button>
+      </form>
+      <button id="logout-button" style="display: none;">Выйти</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="images/books/1984.jpg" alt="Slide 1">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/books/master_and_margarita.jpg" alt="Slide 2">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/books/pride_and_prejudice.jpg" alt="Slide 3">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/books/cather_in_the_rye.jpg" alt="Slide 4">
+        </div>
+        <div class="mySlides fade">
+          <img src="images/books/to_kill_a_mockingbird.jpg" alt="Slide 5">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+      <h1>Добро пожаловать в наш книжный магазин!</h1>
+      <p>Здесь вы найдете широкий выбор книг на любой вкус.</p>
+    </div>
+  </section>
+
+  <section class="featured-books">
+    <div class="container grid-container">
+      <h2>Популярные книги</h2>
+      <div class="books-grid" id="featured-books-grid">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2023 Книжный магазин</p>
+    <p>Контактная информация: ...</p>
+  </div>
+</footer>
+<script src="scripts/utils.js"></script>
+<script src="scripts/data.js"></script>
+<script src="scripts/auth.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

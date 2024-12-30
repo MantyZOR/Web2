@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин - Книжный магазин</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+  <div class="container"> <img src="images/logo.jpg" alt="Логотип" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="shop.html">Магазин</a></li>
+        <li><a href="about.html">Почему мы</a></li>
+        <li><a href="cart.html" id="cart-link" style="display: none;">Список покупок</a></li>
+      </ul>
+    </nav>
+    <div class="auth">
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="Имя пользователя" required>
+        <input type="password" id="password" placeholder="Пароль" required>
+        <button type="submit">Войти</button>
+        <button id="register-button">Регистрация</button>
+      </form>
+      <button id="logout-button" style="display: none;">Выйти</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="shop">
+    <div class="container shop-container">
+      <h2>Магазин</h2>
+      <div class="filters">
+        <button data-filter="cheap">Самые дешевые</button>
+        <button data-filter="expensive">Самые дорогие</button>
+        <button data-filter="all">Все</button>
+      </div>
+      <table class="books-table" id ="books-table">
+        <thead>
+        <tr>
+          <th>Изображение</th>
+          <th>Название</th>
+          <th>Автор</th>
+          <th>Цена</th>
+          <th>Описание</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody id="books-table-body">
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2023 Книжный магазин</p>
+    <p>Контактная информация: ...</p>
+  </div>
+</footer>
+<script src="scripts/utils.js"></script>
+<script src="scripts/data.js"></script>
+<script src="scripts/auth.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

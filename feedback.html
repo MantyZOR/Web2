@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь - Книжный магазин</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+    <div class="container">
+        <img src="images/logo.jpg" alt="Логотип" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="about.html">Почему мы</a></li>
+                <li><a href="cart.html" id="cart-link" style="display: none;">Список покупок</a></li>
+            </ul>
+        </nav>
+        <div class="auth">
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Имя пользователя" required>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+                <button id="register-button">Регистрация</button>
+            </form>
+            <button id="logout-button" style="display: none;">Выйти</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="feedback">
+        <div class="container feedback-container">
+            <h2>Обратная связь</h2>
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="feedback-name">Ваше имя:</label>
+                    <input type="text" id="feedback-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback-phone">Телефон:</label>
+                    <input type="tel" id="feedback-phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback-message">Сообщение:</label>
+                    <textarea id="feedback-message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="feedback-submit">Отправить</button>
+                    <button type="reset" id="feedback-reset">Сбросить</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2023 Книжный магазин</p>
+        <p>Контактная информация: ...</p>
+    </div>
+</footer>
+
+<script src="scripts/data.js"></script>
+<script src="scripts/auth.js"></script>
+<script src="scripts/cart.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/utils.js"></script>
+<script src="scripts/feedback.js"></script>
+</body>
+</html>
