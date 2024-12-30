@@ -32,27 +32,29 @@
 
 <main>
   <section class="shop">
-    <div class="container shop-container">
-      <h2>Магазин</h2>
-      <div class="filters">
-        <button data-filter="cheap">Самые дешевые</button>
-        <button data-filter="expensive">Самые дорогие</button>
-        <button data-filter="all">Все</button>
+    <div class="container">
+      <div class="shop-container">
+        <h2>Магазин</h2>
+        <div class="filters">
+          <button data-filter="cheap">Самые дешевые</button>
+          <button data-filter="expensive">Самые дорогие</button>
+          <button data-filter="all">Все</button>
+        </div>
+        <table class="books-table" id="books-table">
+          <thead>
+          <tr>
+            <th>Изображение</th>
+            <th>Название</th>
+            <th>Автор</th>
+            <th>Цена</th>
+            <th>Описание</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody id="books-table-body">
+          </tbody>
+        </table>
       </div>
-      <table class="books-table" id ="books-table">
-        <thead>
-        <tr>
-          <th>Изображение</th>
-          <th>Название</th>
-          <th>Автор</th>
-          <th>Цена</th>
-          <th>Описание</th>
-          <th></th>
-        </tr>
-        </thead>
-        <tbody id="books-table-body">
-        </tbody>
-      </table>
     </div>
   </section>
 </main>
@@ -60,9 +62,12 @@
 <footer>
   <div class="container">
     <p>© 2023 Книжный магазин</p>
-    <p>Контактная информация: ...</p>
+    <p>Контактная информация: <a href="tel:+79991234567" class="hyper-link">+7 (999) 123-45-67</a>, <a
+            href="mailto:info@bookshop.ru" class="hyper-link">>info@bookshop.ru</a></p>
+    <p>г. Москва, ул. Книжная, д. 10</p>
   </div>
 </footer>
+
 <script src="scripts/utils.js"></script>
 <script src="scripts/data.js"></script>
 <script src="scripts/auth.js"></script>

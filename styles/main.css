@@ -213,7 +213,6 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    width: 500px;
 }
 
 .cart .book-info{
@@ -230,6 +229,7 @@ main {
 
 .shop-container h2{
     margin: 0 0 20px 0;
+    text-align: center;
 }
 
 /* Footer */
@@ -480,4 +480,8 @@ body{
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+.hyper-link {
+    color: white;
 }
